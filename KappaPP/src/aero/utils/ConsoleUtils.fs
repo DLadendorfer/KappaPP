@@ -1,0 +1,27 @@
+﻿namespace Aero.Utils
+
+open System
+
+
+module ConsoleUtils =
+    let cLock = "__console_lock__"
+
+    let errorColor = ConsoleColor.Red
+    let infoColor = ConsoleColor.Yellow
+    let debugColor = ConsoleColor.Cyan
+    let successColor = ConsoleColor.Green
+
+    let internalConsole (msg:string) (consoleColor:ConsoleColor) =
+        Console.ForegroundColor <- consoleColor
+        Console.WriteLine(msg)
+        Console.ResetColor()        
+
+    let console (msg:string) (consoleColor:ConsoleColor) =
+        lock cLock (fun _ -> internalConsole msg consoleColor)
+            
+    let error  (msg:string) = console msg errorColor
+    let info   (msg:string) = console msg infoColor
+    let debug  (msg:string) = console msg debugColor
+    let success(msg:string) = console msg successColor
+    let output (msg:string) = Console.Write(msg)
+    

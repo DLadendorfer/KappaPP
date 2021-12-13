@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TwitchLang": {
+      "commandName": "Project",
+      "commandLineArgs": "-run C:\\Users\\Admin\\twitchlang_scripts\\test.ttv"
+    }
+  }
+}

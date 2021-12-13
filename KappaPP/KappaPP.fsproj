@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+    <AssemblyName>KappaPP</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="src\aero\utils\DiagnosticUtils.fs" />
+    <Compile Include="src\aero\utils\ConsoleUtils.fs" />
+    <Compile Include="src\aero\runtime\Stack.fs" />
+    <Compile Include="src\aero\runtime\Runtime.fs" />
+    <Compile Include="src\aero\lang\error\SyntaxError.fs" />
+    <Compile Include="src\aero\lang\Syntax.fs" />
+    <Compile Include="src\aero\lang\Lexer.fs" />
+    <Compile Include="src\aero\lang\SyntaxValidator.fs" />
+    <Compile Include="src\aero\lang\Interpreter.fs" />
+    <Compile Include="src\aero\error\Errors.fs" />
+    <Compile Include="src\aero\app\Runner.fs" />
+    <Compile Include="src\aero\entry\Entry.fs" />
+    <Compile Include="test\app\RunnerTests.fs" />
+    <Compile Include="test\entry\EntryTest.fs" />
+    <Compile Include="test\error\ErrorsTest.fs" />
+    <Compile Include="test\lang\SyntaxTests.fs" />
+    <Compile Include="test\runtime\StackTests.fs" />
+    <Compile Include="test\utils\ConsoleUtilsTest.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
+  </ItemGroup>
+
+</Project>

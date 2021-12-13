@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "KappaPP", "KappaPP\KappaPP.fsproj", "{35044B68-937C-41A8-BA69-2EE3950FD35C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35044B68-937C-41A8-BA69-2EE3950FD35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35044B68-937C-41A8-BA69-2EE3950FD35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35044B68-937C-41A8-BA69-2EE3950FD35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35044B68-937C-41A8-BA69-2EE3950FD35C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B45D58A7-FD1E-440F-B6A3-B783806E843D}
+	EndGlobalSection
+EndGlobal
