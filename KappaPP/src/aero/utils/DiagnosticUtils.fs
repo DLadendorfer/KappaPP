@@ -1,4 +1,8 @@
-﻿namespace Aero.Utils
+﻿// -------------------------------------------------------------------------------
+// Copyright (c) Ladendorfer Daniel.  
+// All Rights Reserved.  See LICENSE in the project root for license information.
+// -------------------------------------------------------------------------------
+namespace Aero.Utils
 
 module DiagnosticUtils =
     open System.Diagnostics

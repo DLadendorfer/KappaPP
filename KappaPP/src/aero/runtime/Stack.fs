@@ -1,4 +1,8 @@
-﻿namespace Aero.Runtime
+﻿// -------------------------------------------------------------------------------
+// Copyright (c) Ladendorfer Daniel.  
+// All Rights Reserved.  See LICENSE in the project root for license information.
+// -------------------------------------------------------------------------------
+namespace Aero.Runtime
 
 module Stack = 
     open System.Collections.Generic

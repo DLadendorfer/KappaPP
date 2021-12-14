@@ -1,4 +1,8 @@
-﻿namespace Aero.Lang
+﻿// -------------------------------------------------------------------------------
+// Copyright (c) Ladendorfer Daniel.  
+// All Rights Reserved.  See LICENSE in the project root for license information.
+// -------------------------------------------------------------------------------
+namespace Aero.Lang
 module Interpreter =
     open System
     open Aero.Lang.Syntax

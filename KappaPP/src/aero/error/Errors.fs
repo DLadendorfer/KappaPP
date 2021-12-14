@@ -1,4 +1,8 @@
-﻿namespace Aero.Error
+﻿// -------------------------------------------------------------------------------
+// Copyright (c) Ladendorfer Daniel.  
+// All Rights Reserved.  See LICENSE in the project root for license information.
+// -------------------------------------------------------------------------------
+namespace Aero.Error
 
 module Errors =
     

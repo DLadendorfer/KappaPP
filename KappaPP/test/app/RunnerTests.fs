@@ -1,6 +1,8 @@
-﻿namespace Aero.App
-
-
+﻿// -------------------------------------------------------------------------------
+// Copyright (c) Ladendorfer Daniel.  
+// All Rights Reserved.  See LICENSE in the project root for license information.
+// -------------------------------------------------------------------------------
+namespace Aero.App
 module RunnerTests =
     open NUnit.Framework
     open Aero.App.Runner
