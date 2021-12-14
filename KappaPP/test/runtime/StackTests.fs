@@ -33,9 +33,3 @@ module StackTests =
         let popped = stack.Pop()
         Assert.That(popped, Is.EqualTo(2))
         Assert.That(stack.Stack(), Is.EqualTo(expected))
-
-    [<Test>]
-    let StackDumpTest () =
-        let stack = Stack(1)
-        [1; 2; 3] |> List.iter stack.Push
-        Assert.That(stack.Dump(), Is.EqualTo(()))

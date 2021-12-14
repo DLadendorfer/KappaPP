@@ -4,51 +4,63 @@
 // -------------------------------------------------------------------------------
 namespace Aero.Lang
 
+///<summary>
+/// This module contains the grammar of Kappa++. This is the only allowed module for language definitions. 
+///</summary>
 module Syntax =
     open Aero.Utils.ConsoleUtils
 
-    type [<RequireQualifiedAccess>]  Token =
     // type token list [name = Twitch Emote name]
-        // None
+    type [<RequireQualifiedAccess>]  Token =
+
+        // None/NULL
+        // Everything that gets discarded by the lexer has to be transformed into a NULL token.
+        // This token has no meaning and can either not be passed to interpreters and or be ignored by interpreters.
         | None
 
-        // literals [numbers]
+        // Literals
+        // These tokens are actual values that can be pushed onto a stack. These are not operators. The values are
+        // ASCII values and therefore numbers are not a one to one relation to their corresponding stack value.
         | VoteNay | VoteYea | TehePelo | TheIlluminati | SSSsss | TwitchUnity | UnSane | SabaPing | PoroSad | OhMyDog           
 
-        // region definers 
-        | TbAngel | GivePlz | TakeNRG
+        // Region definiers
+        // These tokens are delimiters of certain chunks of code. In other languages these are often parenthesis.
+        // eg.: ()[]{}
+        | GivePlz | TakeNRG
         
-        // stack commands
-        | PogChamp | ThankEgg | CopyThis
+        // Stack operators
+        // These tokens manage the creation, management and deletion of stacks. 
+        | TbAngel | PogChamp | ThankEgg | CopyThis
 
-        // operators
+        // Operators
+        // These tokens operate on the values that are pushed on the stack. These can be prefix, postfix and binary operators.
         | RiPepperonis | NomNom | MorphinTime | TwitchSings | LUL | CoolCat | KKona | PowerUpL | PowerUpR | TwitchVotes | FBBlock
 
         // IO commands
+        // These tokens either take input from the app invoker or provide output for the app invoker
         | Kappa | SwiftRage
 
-        // control flow
+        // Control Flow
+        // These tokens manipulate the code execution based on the values on the stack. e.g.: classic if/ifnot etc.
         | EleGiggle | Jebaited
 
     type [<RequireQualifiedAccess>]  CompileUnit =
-    // type token list [name = Twitch Emote name]
         // None
         | None
         
-        // literals [numbers]
+        // literals 
         | I_0 | I_1 | I_2 | I_3 | I_4 | I_5 | I_6 | I_7 | I_8 | I_9
 
         // region definers 
         | StackOrigin | BlockOrigin | BlockEnd
 
-
-        // stack commands
+        // stack 
         | StackInit | StackDestroy | StackDuplicate
 
         // operators
         | OpAdd | OpRemove | OpDelete | OpDivide | OpMultiply | OpSubtract | OpConcat | OpDuplicate | OpLower | OpGreater | OpEquals
 
-        // IO commands
+        // IO 
         | IoSysout | IoSyserr
 
         // control flow
@@ -61,6 +73,7 @@ module Syntax =
     let tokenInfo (token:TokenInfo) = 
         debug $"\t>>{token.Raw}::{token.CompileUnit}::{token.Value}"
 
+    // Complete grammar of Kappa++
     let syntax:TokenInfo list = [
         { Raw = ""; Token = Token.None; CompileUnit = CompileUnit.None; Value = Null "[null]" };  
 

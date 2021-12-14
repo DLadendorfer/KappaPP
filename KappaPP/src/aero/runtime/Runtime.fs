@@ -5,7 +5,7 @@
 namespace Aero.Runtime
 module Runtime =
     open System
-    open System.Collections.Generic
+    open Aero.Utils.StdWrapper
     open Aero.Utils.ConsoleUtils
     open Aero.Runtime.Stack
 
@@ -15,7 +15,7 @@ module Runtime =
 
         let mutable activeStack = origin
         let mutable skipNextBlock = false
-        let stacks = Dictionary<int, Stack>()
+        let stacks = SysDict<int, Stack>()
 
         member this.InitStack() =
             let id = activeStack.Pop()
