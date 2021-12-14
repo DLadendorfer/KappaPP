@@ -3,6 +3,11 @@
 // All Rights Reserved.  See LICENSE in the project root for license information.
 // -------------------------------------------------------------------------------
 namespace Aero.Runtime
+
+///<summary>
+/// This module contains the runtime type which is the runtime instance (the mutable state) that the interpreter
+/// invokes based on the tokenized source code.
+///</summary>
 module Runtime =
     open System
     open Aero.Utils.StdWrapper
