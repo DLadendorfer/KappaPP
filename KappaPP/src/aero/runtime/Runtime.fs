@@ -38,24 +38,24 @@ module Runtime =
         member this.PushValue(value) = 
             activeStack.Push(value)
 
+        member this.Remove() =
+            activeStack.Pop() |> ignore
+            ()
+
         member this.Add() =
-            let b = activeStack.Pop()
-            let a = activeStack.Pop()
+            let a, b = activeStack.BinaryPop()
             activeStack.Push(a + b)
 
         member this.Subtract() =
-            let b = activeStack.Pop()
-            let a = activeStack.Pop()
+            let a, b = activeStack.BinaryPop()
             activeStack.Push(a - b)
 
         member this.Multiply() =
-            let b = activeStack.Pop()
-            let a = activeStack.Pop()
+            let a, b = activeStack.BinaryPop()
             activeStack.Push(a * b)
 
         member this.Divide() =
-            let b = activeStack.Pop()
-            let a = activeStack.Pop()
+            let a, b = activeStack.BinaryPop()
             if b = 0 then raise(Exception())
             activeStack.Push(a / b)
 
@@ -64,9 +64,20 @@ module Runtime =
             this.PushValue(value)
 
         member this.Concat() =
-            let b = activeStack.Pop()
-            let a = activeStack.Pop()
+            let a, b = activeStack.BinaryPop()
             this.PushValue (int(string(a) + string(b)))
+
+        member this.Greater() =
+            let a, b = activeStack.BinaryPeek()
+            this.PushValue(if a > b then 1 else 0)
+
+        member this.Lower() =
+            let a, b = activeStack.BinaryPeek()
+            this.PushValue(if a < b then 1 else 0)
+
+        member this.Equal() =
+            let a, b = activeStack.BinaryPeek()
+            this.PushValue(if a = b then 1 else 0)
 
         member this.SkipNextBlock(flag) =
             skipNextBlock <- flag

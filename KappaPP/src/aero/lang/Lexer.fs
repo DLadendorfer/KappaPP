@@ -8,7 +8,7 @@ module Lexer =
         debug "Lexing tokens:"
         src
         |> Array.map (fun sourceToken -> sourceToken.ToLowerInvariant())
-        |> Array.map(fun sourceToken -> 
+        |> Array.map (fun sourceToken -> 
             match syntax |> List.tryFind (fun s -> sourceToken = s.Raw) with
             | Some t -> t               
             | None   -> syntax.Head // null token is head

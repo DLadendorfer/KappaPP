@@ -10,9 +10,13 @@ module Interpreter =
         | t when t.CompileUnit = CompileUnit.OpConcat -> runtime.Concat()
         | t when t.CompileUnit = CompileUnit.OpDuplicate -> runtime.Duplicate()
         | t when t.CompileUnit = CompileUnit.OpAdd -> runtime.Add()
+        | t when t.CompileUnit = CompileUnit.OpRemove -> runtime.Remove()
         | t when t.CompileUnit = CompileUnit.OpSubtract -> runtime.Subtract()
         | t when t.CompileUnit = CompileUnit.OpMultiply -> runtime.Multiply()
         | t when t.CompileUnit = CompileUnit.OpDivide -> runtime.Divide()
+        | t when t.CompileUnit = CompileUnit.OpLower -> runtime.Lower()
+        | t when t.CompileUnit = CompileUnit.OpGreater -> runtime.Greater()
+        | t when t.CompileUnit = CompileUnit.OpEquals -> runtime.Equal()
         | _ -> raise (NotImplementedException())
 
     let interpreteIO (token:TokenInfo) (runtime:Runtime) = 
