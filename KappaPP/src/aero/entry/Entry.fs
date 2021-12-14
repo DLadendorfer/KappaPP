@@ -8,6 +8,9 @@ open Aero.Utils.ConsoleUtils
 open Aero.Error.Errors
 open Aero.App.Runner
 
+///<summary>
+/// Invokes the correct procedures based on the given command line args.
+///</summary>
 module Entry =
     let help () = 
         info "Execute a source file with -run <pathToFile>"
@@ -22,7 +25,6 @@ module Entry =
         | _ ->
             error "Too many arguments provided. Run with -help for help." 
             ExitCode.InvalidArgumentLength |> toExitValue
-
 
     let invokeApp (argv:string array) : int = 
         match argv.[0] with

@@ -3,6 +3,11 @@
 // All Rights Reserved.  See LICENSE in the project root for license information.
 // -------------------------------------------------------------------------------
 namespace Aero.Lang
+
+///<summary>
+/// This module contains the interpreter functionality. At this point the source is already tokenized; passed through the
+/// lexer.
+///</summary>
 module Interpreter =
     open System
     open Aero.Lang.Syntax

@@ -4,9 +4,11 @@
 // -------------------------------------------------------------------------------
 namespace Aero.App
 
+///<summary>
+/// The "runner" is an umbrella term that encapsulates the lexer, a syntax validator and the interpreter.
+/// For the language details check ../lang/Syntax.fs. Alternatively check the documentation in the project root.
+///</summary>
 module Runner =
-
-    open System.Diagnostics
     open System.IO
     open Aero.Lang.Interpreter
     open Aero.Error.Errors
@@ -21,7 +23,7 @@ module Runner =
         let stopwatch = startTimer
         info $"Running source:\n{src}\n"
         let tokens = src
-                     |> fun s -> s.Split [| ' '; '\t'; '\n'; ':'; |]
+                     |> fun s -> s.Split [| ' '; '\t'; ':'; |]
                      |> tokenize
         tokens |> Array.iter tokenInfo
         validateSyntax tokens
