@@ -99,6 +99,9 @@ module Runtime =
             |> string
             |> output
 
+        member this.SysoutAll() =
+            while activeStack.Count() > 0 do this.Sysout()
+
         member this.Syserr() =
             activeStack.Pop()
             |> char 

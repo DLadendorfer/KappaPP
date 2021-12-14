@@ -31,6 +31,8 @@ module Interpreter =
     let interpreteIO (token:TokenInfo) (runtime:Runtime) = 
         match token with
         | t when t.CompileUnit = CompileUnit.IoSysout -> runtime.Sysout()
+        | t when t.CompileUnit = CompileUnit.IoSysoutAll -> runtime.SysoutAll()
+        | t when t.CompileUnit = CompileUnit.IoReadLine -> raise(NotImplementedException())
         | t when t.CompileUnit = CompileUnit.IoSyserr -> runtime.Syserr()
         | _ -> raise (NotImplementedException())
 

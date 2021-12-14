@@ -41,7 +41,7 @@ module Syntax =
 
         // IO commands
         // These tokens either take input from the app invoker or provide output for the app invoker
-        | Kappa | SwiftRage
+        | Kappa | KappaPride | SwiftRage | SingsMic
 
         // Control Flow
         // These tokens manipulate the code execution based on the values on the stack. e.g.: classic if/ifnot etc.
@@ -64,7 +64,7 @@ module Syntax =
         | OpAdd | OpRemove | OpDelete | OpDivide | OpMultiply | OpSubtract | OpConcat | OpDuplicate | OpLower | OpGreater | OpEquals
 
         // IO 
-        | IoSysout | IoSyserr
+        | IoSysout | IoSysoutAll | IoSyserr | IoReadLine
 
         // control flow
         | CfIf | CfElse
@@ -111,8 +111,10 @@ module Syntax =
         { Raw = "twitchvotes"; Token = Token.TwitchVotes; CompileUnit = CompileUnit.OpEquals; Value = Operator "[op_equals]"}
         { Raw = "fbblock"; Token = Token.FBBlock; CompileUnit = CompileUnit.OpRemove; Value = Operator "[op_remove]"}
         
-        { Raw = "kappa"; Token = Token.Kappa; CompileUnit = CompileUnit.IoSysout; Value = IO "[io_sysout]" }; 
+        { Raw = "kappa"; Token = Token.Kappa; CompileUnit = CompileUnit.IoSysout; Value = IO "[io_sysout]" };
+        { Raw = "kappapride"; Token = Token.KappaPride; CompileUnit = CompileUnit.IoSysoutAll; Value = IO "[io_sysoutall]"}
         { Raw = "swiftrage"; Token = Token.SwiftRage; CompileUnit = CompileUnit.IoSyserr; Value = IO "[io_syserr]" }; 
+        { Raw = "singsmic"; Token = Token.SingsMic; CompileUnit = CompileUnit.IoReadLine; Value = IO "[io_readline]"}
           
         { Raw = "elegiggle"; Token = Token.EleGiggle; CompileUnit = CompileUnit.CfIf; Value = CF "[cf_if]" };
         { Raw = "jebaited"; Token = Token.Jebaited; CompileUnit = CompileUnit.CfElse; Value = CF "[cf_else]" };    
