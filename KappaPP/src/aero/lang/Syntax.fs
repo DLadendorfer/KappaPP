@@ -10,6 +10,9 @@ namespace Aero.Lang
 module Syntax =
     open Aero.Utils.ConsoleUtils
 
+    // token delimiters
+    let splitChars() = [| ' '; '\t'; ':'; |]
+
     // type token list [name = Twitch Emote name]
     type [<RequireQualifiedAccess>]  Token =
 

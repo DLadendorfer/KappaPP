@@ -16,20 +16,20 @@ module Runner =
     open Aero.Lang.Lexer
     open Aero.Lang.SyntaxValidator
     open Aero.Utils.ConsoleUtils
-    open Aero.Utils.DiagnosticUtils
-      
+    
+    let debugTokens (tokens) =
+        tokens |> Array.iter tokenInfo
+        tokens
 
     let runSource (src:string) =
-        let stopwatch = startTimer
-        info $"Running source:\n{src}\n"
-        let tokens = src
-                     |> fun s -> s.Split [| ' '; '\t'; ':'; |]
-                     |> tokenize
-        tokens |> Array.iter tokenInfo
-        validateSyntax tokens
-        interprete tokens
+        info $"Source:\n{src}\n"
+        src
+        |> fun s -> s.Split (splitChars())
+        |> tokenize
+        |> debugTokens
+        |> validateSyntax
+        |> interprete
 
-        //success $"\nFinished source run in {(stopTimer stopwatch).ElapsedMilliseconds}ms"
         ExitCode.Success |> toExitValue
 
     let runScript (path:string) =

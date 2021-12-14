@@ -17,6 +17,11 @@ module Stack =
 
         member this.Id = id
         
+        // due to the significance of this data structure each member provides info about the operation
+        // S[1, 2] <= Stack with values 1 and 2
+        // >> Push <= invocation of this.Push
+        // =>S[1,2]<= Stack after the invocation
+
         /// Pushes the provided value onto the stack:
         /// S[1, 2] >> Push 3 => S[1, 2, 3]
         member this.Push value = 

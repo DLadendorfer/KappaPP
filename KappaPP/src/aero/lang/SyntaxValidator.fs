@@ -31,7 +31,7 @@ module SyntaxValidator =
             //   | t when t.CompileUnit = CompileUnit.CfThen || t.CompileUnit = CompileUnit.CfElse -> () // checked by conditional check (cfif)
             //   | t when (t.Value.GetType() = TokenValue.Operator.GetType()) -> () // operators can always be invoked
             //   | _ -> raise(SyntaxErrorException($"Unknown token: {token}"))
-               
+            tokens
         with
-        | :? SyntaxErrorException as err -> error err.Message
+        | :? SyntaxErrorException as err -> error err.Message; raise err
 
