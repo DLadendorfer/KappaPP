@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Compile Include="src\aero\utils\StdWrapper.fs" />
-    <Compile Include="src\aero\utils\DiagnosticUtils.fs" />
     <Compile Include="src\aero\utils\ConsoleUtils.fs" />
     <Compile Include="src\aero\runtime\Stack.fs" />
     <Compile Include="src\aero\runtime\Runtime.fs" />
