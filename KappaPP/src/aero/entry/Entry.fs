@@ -7,15 +7,14 @@ namespace Aero.Entry
 open Aero.Utils.ConsoleUtils
 open Aero.Error.Errors
 open Aero.App.Runner
+open Aero.App.Cli
+open Aero.App.Help
 
 ///<summary>
 /// Invokes the correct procedures based on the given command line args.
 ///</summary>
 module Entry =
-    let help () = 
-        info "Execute a source file with -run <pathToFile>"
-        ExitCode.Success |> toExitValue
-
+        
     let run (argv:string array) =
         match argv.Length with
         | 2 ->
@@ -30,6 +29,7 @@ module Entry =
         match argv.[0] with
         | "-help" -> help ()
         | "-run" -> run argv
+        | "-cli" -> cli ()
         | _ -> 
             error "Unknown argument. Run with -help for help."
             ExitCode.InvalidArguments |> toExitValue
