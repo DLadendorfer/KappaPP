@@ -10,7 +10,7 @@ namespace Aero.Lang
 ///</summary>
 module Lexer =
     open Aero.Lang.Syntax
-    open Aero.Utils.ConsoleUtils
+    open Aero.Events.Event.Triggers
     
     let nullToken = syntax.Head
 

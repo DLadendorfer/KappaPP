@@ -10,18 +10,38 @@ namespace Aero.App
 ///</summary>
 module Runner =
     open System.IO
+    open Aero.Events.Event.IO
+    open Aero.Events.Event.Diagnostics
+    open Aero.Events.Event.Triggers
     open Aero.Lang.Interpreter
     open Aero.Error.Errors
     open Aero.Lang.Syntax
     open Aero.Lang.Lexer
     open Aero.Lang.SyntaxValidator
-    open Aero.Utils.ConsoleUtils
+    open Aero.Utils
     
+    let mutable handlersInitialized = false
+
+    let setupHandlers () =
+        if not(handlersInitialized) then
+            // delegate diagnostic message to Console
+            Info.Add    (fun msg -> ConsoleUtils.info msg)
+            Debug.Add   (fun msg -> ConsoleUtils.debug msg)
+            Error.Add   (fun msg -> ConsoleUtils.error msg)
+            Success.Add (fun msg -> ConsoleUtils.success msg)
+    
+            // delegate sysout to Console
+            Output.Add  (fun msg -> ConsoleUtils.output msg)
+            Error.Add   (fun msg -> ConsoleUtils.output msg)
+
+            handlersInitialized <- true
+
     let debugTokens (tokens) =
         tokens |> Array.iter tokenInfo
         tokens
 
     let runSource (src:string) =
+        setupHandlers()
         info $"Source:\n{src}\n"
         src
         |> fun s -> s.Split (splitChars())
@@ -33,6 +53,7 @@ module Runner =
         ExitCode.Success |> toExitValue
 
     let runScript (path:string) =
+        setupHandlers()
         if not (File.Exists path) then 
             error "File does not exist"            
             ExitCode.InvalidArguments |> toExitValue

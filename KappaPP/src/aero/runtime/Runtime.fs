@@ -11,7 +11,7 @@ namespace Aero.Runtime
 module Runtime =
     open System
     open Aero.Utils.StdWrapper
-    open Aero.Utils.ConsoleUtils
+    open Aero.Events.Event.Triggers
     open Aero.Runtime.Stack
 
     /// The mutable Kappa++ state wrapper.
@@ -151,4 +151,4 @@ module Runtime =
             activeStack.Pop()
             |> char 
             |> string
-            |> error
+            |> errorOutput

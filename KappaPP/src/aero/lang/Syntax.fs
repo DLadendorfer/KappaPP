@@ -8,7 +8,7 @@ namespace Aero.Lang
 /// This module contains the grammar of Kappa++. This is the only allowed module for language definitions. 
 ///</summary>
 module Syntax =
-    open Aero.Utils.ConsoleUtils
+    open Aero.Events.Event.Triggers
 
     // token delimiters
     let splitChars() = [| ' '; '\t'; ':'; |]

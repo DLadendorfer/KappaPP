@@ -6,7 +6,7 @@ namespace Aero.Lang
 module SyntaxValidator =
     open Aero.Lang.Error.SyntaxError
     open Aero.Lang.Syntax
-    open Aero.Utils.ConsoleUtils
+    open Aero.Events.Event.Triggers
 
     let validateConditional cfif tokens =
         // todo
