@@ -19,6 +19,8 @@
     <Compile Include="src\aero\lang\SyntaxValidator.fs" />
     <Compile Include="src\aero\lang\Interpreter.fs" />
     <Compile Include="src\aero\error\Errors.fs" />
+    <Compile Include="src\aero\app\Cli.fs" />
+    <Compile Include="src\aero\app\Help.fs" />
     <Compile Include="src\aero\app\Runner.fs" />
     <Compile Include="src\aero\entry\Entry.fs" />
     <Compile Include="test\app\RunnerTests.fs" />
