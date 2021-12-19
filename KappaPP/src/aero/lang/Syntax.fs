@@ -73,9 +73,6 @@ module Syntax =
 
     type TokenInfo = { Raw:string; Token:Token; CompileUnit:CompileUnit; Value:TokenValue }
 
-    let tokenInfo (token:TokenInfo) = 
-        debug $"\t>>{token.Raw}::{token.CompileUnit}::{token.Value}"
-
     // Complete grammar of Kappa++
     let syntax:TokenInfo list = [
         { Raw = ""; Token = Token.None; CompileUnit = CompileUnit.None; Value = Null "[null]" };  

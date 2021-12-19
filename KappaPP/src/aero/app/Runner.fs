@@ -37,17 +37,12 @@ module Runner =
 
             handlersInitialized <- true
 
-    let debugTokens (tokens) =
-        tokens |> Array.iter tokenInfo
-        tokens
-
     let runSource (src:string) =
         setupHandlers()
         info $"Source:\n{src}\n"
         src
         |> splitSource
         |> tokenize
-        |> debugTokens
         |> interprete (Runtime())
 
         ExitCode.Success |> toExitValue
