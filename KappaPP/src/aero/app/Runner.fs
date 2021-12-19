@@ -17,7 +17,7 @@ module Runner =
     open Aero.Error.Errors
     open Aero.Lang.Syntax
     open Aero.Lang.Lexer
-    open Aero.Lang.SyntaxValidator
+    open Aero.Lang.Validator
     open Aero.Runtime.Runtime
     open Aero.Utils
     
@@ -48,7 +48,6 @@ module Runner =
         |> splitSource
         |> tokenize
         |> debugTokens
-        |> validateSyntax
         |> interprete (Runtime())
 
         ExitCode.Success |> toExitValue
