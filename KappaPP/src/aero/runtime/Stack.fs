@@ -27,28 +27,28 @@ module Stack =
         member this.Push value = 
             content.Push(value)
         
-        /// Pops the top element form the stack and returns it:
+        /// Pops the top element form the stack and returns it (0 if stack empty):
         /// S[1, 2] >> Pop => S[1] returned 2
         member this.Pop () = 
-            content.Pop()
+            if content.Count > 0 then content.Pop() else 0
 
         /// Pops the stack twice and returns it as a tuple (second top most, top most):
         /// S[1, 2, 3] >> BinaryPop => S[1] returned (2, 3)
         member this.BinaryPop () =
-            let b = content.Pop()
-            let a = content.Pop()
+            let b = this.Pop()
+            let a = this.Pop()
             (a, b)
 
-        /// Peeks the stack and returns the value:
+        /// Peeks the stack and returns the value (0 if stack empty):
         /// S[1, 2] >> Peek => S[1, 2] returned 2
         member this.Peek () = 
-            content.Peek()
+            if content.Count > 0 then content.Peek() else 0
 
         /// Peeks the stack twice and returns it as a tuple (second top most, top most):
         /// S[1, 2, 3] >> BinaryPeek => S[1, 2, 3] returned (2, 3)
         member this.BinaryPeek() =
-            let b = content.Peek()
-            let a = content.Skip(1).First()
+            let b = this.Peek()
+            let a = if content.Count > 1 then content.Skip(1).First() else 0
             (a, b)
 
         /// Returns the stack count (number of elements on the stack):
