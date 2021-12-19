@@ -15,8 +15,9 @@ module Runtime =
     open Aero.Runtime.Stack
 
     /// The mutable Kappa++ state wrapper.
-    type Runtime() =
-        
+    type Runtime() =        
+        do info "Constructed new K++ runtime"
+
         // ORIGIN STACK
         // The origin stack is the base stack that the runtime will always have.
         // The intention of this stack is to be able to create other stacks, though it is possible to push onto it and

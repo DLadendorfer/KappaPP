@@ -14,6 +14,9 @@ module Lexer =
     
     let nullToken = syntax.Head
 
+    let splitSource (source:string) = 
+        source.Split (splitChars())
+
     let tokenize (src:string array) =
         debug "Lexing tokens:"
         src

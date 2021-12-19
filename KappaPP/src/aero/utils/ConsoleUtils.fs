@@ -11,9 +11,11 @@ module ConsoleUtils =
     let cLock = "__console_lock__"
 
     let errorColor = ConsoleColor.Red
-    let infoColor = ConsoleColor.Yellow
-    let debugColor = ConsoleColor.Cyan
+    let infoColor = ConsoleColor.Cyan
+    let debugColor = ConsoleColor.Yellow
     let successColor = ConsoleColor.Green
+
+    let readLine = Console.ReadLine
 
     let internalConsole (msg:string) (consoleColor:ConsoleColor) =
         Console.ForegroundColor <- consoleColor

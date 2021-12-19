@@ -56,8 +56,7 @@ module Interpreter =
         | t when t.CompileUnit = CompileUnit.CfElse -> runtime.Condition(false)
         | _ -> raise (NotImplementedException())
 
-    let interprete (tokens:TokenInfo array) =
-        let runtime = Runtime()
+    let interprete (runtime:Runtime) (tokens:TokenInfo array) =
         let mutable skipBlock = false
 
         for token in tokens do

@@ -18,6 +18,7 @@ module Runner =
     open Aero.Lang.Syntax
     open Aero.Lang.Lexer
     open Aero.Lang.SyntaxValidator
+    open Aero.Runtime.Runtime
     open Aero.Utils
     
     let mutable handlersInitialized = false
@@ -44,11 +45,11 @@ module Runner =
         setupHandlers()
         info $"Source:\n{src}\n"
         src
-        |> fun s -> s.Split (splitChars())
+        |> splitSource
         |> tokenize
         |> debugTokens
         |> validateSyntax
-        |> interprete
+        |> interprete (Runtime())
 
         ExitCode.Success |> toExitValue
 

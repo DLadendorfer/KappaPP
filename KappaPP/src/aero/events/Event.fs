@@ -10,8 +10,13 @@ namespace Aero.Events
 module Event =
     /// IO Events
     module IO =
+        let beforeInput  = new Event<_>()
         let output = new Event<string>()
         let error  = new Event<string>()
+
+        /// Input event (Sysin)
+        [<CLIEvent>]
+        let BeforeInput = beforeInput.Publish
 
         /// Output event (Sysout from Kappa++ code)
         [<CLIEvent>]
@@ -23,10 +28,15 @@ module Event =
 
     // App diagnostics events
     module Diagnostics =
+        let prefix  = new Event<string>()
         let info    = new Event<string>()
         let debug   = new Event<string>()
         let error   = new Event<string>()
         let success = new Event<string>()
+
+        /// Prefix message handler
+        [<CLIEvent>]
+        let Prefix = prefix.Publish
 
         /// Info message
         [<CLIEvent>]
@@ -47,8 +57,10 @@ module Event =
     // Event triggers
     module Triggers =
         let trigger(event:Event<_>) message =
+            Diagnostics.prefix.Trigger(message)
             event.Trigger(message)
 
+        let beforeInput()           = IO.beforeInput.Trigger()      
         let output(message)         = message |> trigger IO.output
         let errorOutput(message)    = message |> trigger IO.error
         
