@@ -15,6 +15,8 @@ module Cli =
     open Aero.Runtime.Runtime
     open Aero.Lang.Lexer
     open Aero.Lang.Interpreter
+    open Aero.Utils.Constants.Application
+    open Aero.Utils.Constants.Language
     open Aero.Utils
 
     type CliPrefixHandler() =
@@ -71,6 +73,7 @@ module Cli =
     let cli () = 
         setupHandlers()
         error "\b══════════ K++ CLI Runtime ══════════════════════════════"
+        info $"{appName} :: lang = {langVersion}"
         info "Enter K++ source lines to invoke them. Enter nothing to exit."
         cliLoop()
         prefixHandler.SendLastMessage()

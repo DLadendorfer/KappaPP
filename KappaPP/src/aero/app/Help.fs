@@ -15,10 +15,17 @@ module Help =
 
     let setupHandlers() =
         Info.Add    (fun msg -> ConsoleUtils.info msg)
+        Debug.Add   (fun msg -> ConsoleUtils.debug $"\t|> KappaPP.exe {msg}")
 
     /// Displays uses of the executable.
     let help () = 
         setupHandlers()
+        info "The following apps can be started: Runner (-run), CLI (-cli), Help (-help):"
+        info "Execute Kappa++ code in an interactive CLI with -cli"
+        debug "-cli"
         info "Execute a source file with -run <pathToFile>"
+        debug "-run \"<path>\""
+        info "Get this help with -help."
+        debug "-help"
         ExitCode.Success |> toExitValue
 

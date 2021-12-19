@@ -16,7 +16,6 @@ module Runtime =
 
     /// The mutable Kappa++ state wrapper.
     type Runtime() =        
-        do info "Constructed new K++ runtime"
 
         // ORIGIN STACK
         // The origin stack is the base stack that the runtime will always have.

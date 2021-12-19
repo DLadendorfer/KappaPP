@@ -15,10 +15,10 @@ module Runner =
     open Aero.Events.Event.Triggers
     open Aero.Lang.Interpreter
     open Aero.Error.Errors
-    open Aero.Lang.Syntax
     open Aero.Lang.Lexer
-    open Aero.Lang.Validator
     open Aero.Runtime.Runtime
+    open Aero.Utils.Constants.Application
+    open Aero.Utils.Constants.Language
     open Aero.Utils
     
     let mutable handlersInitialized = false
@@ -38,8 +38,8 @@ module Runner =
             handlersInitialized <- true
 
     let runSource (src:string) =
+        info $"{appName} :: lang = {langVersion}"
         setupHandlers()
-        info $"Source:\n{src}\n"
         src
         |> splitSource
         |> tokenize

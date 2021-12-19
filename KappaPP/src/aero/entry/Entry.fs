@@ -19,8 +19,11 @@ module Entry =
         match argv.Length with
         | 2 ->
             let path = argv.[1]
-            debug $"Executing {path}"
+            debug $"Executing {path}:"
             runScript path
+        | 1 ->
+            error "A path to a file must be provided. Run with -help for help." 
+            ExitCode.InvalidArgumentLength |> toExitValue
         | _ ->
             error "Too many arguments provided. Run with -help for help." 
             ExitCode.InvalidArgumentLength |> toExitValue

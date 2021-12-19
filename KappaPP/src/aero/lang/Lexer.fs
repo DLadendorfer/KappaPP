@@ -18,7 +18,6 @@ module Lexer =
         source.Split (splitChars())
 
     let tokenize (src:string array) =
-        debug "Lexing tokens:"
         src
         |> Array.map (fun sourceToken -> sourceToken.ToLowerInvariant())
         |> Array.map (fun sourceToken -> 

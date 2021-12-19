@@ -11,7 +11,3 @@ module SyntaxTests =
     let Setup () =
         ()
 
-    [<Test>]
-    let TokenInfoTest () =
-        syntax 
-        |> List.iter (fun token -> Assert.That(tokenInfo token, Is.EqualTo(())))
