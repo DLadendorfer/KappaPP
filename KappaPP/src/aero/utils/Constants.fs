@@ -17,8 +17,8 @@ module Constants =
     /// Language constants
     module Language =
         open Application
-        let langMajor = 0
-        let langMinor = 1
+        let langMajor = 1
+        let langMinor = 0
         let langPatch = 0
         let langVersion = $"{appNameShort} (V::{langMajor}.{langMinor}.{langPatch})"
 
