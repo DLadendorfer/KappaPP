@@ -43,6 +43,9 @@ Here is a minified version of this code:
 TBAngel VoteYea PogChamp VoteYea CoolCat CoolCat LUL LUL CoolCat TheIlluminati KKona CoolCat CoolCat SabaPing KKona SabaPing TehePelo LUL KappaPride TehePelo PogChamp VoteYea VoteNay LUL VoteNay LUL CoolCat PoroSad riPepperonis CoolCat UnSane riPepperonis CoolCat TheIlluminati KKona PoroSad SabaPing LUL VoteYea PogChamp KappaPride ThankEgg SSSsss CoolCat LUL Kappa TheIlluminati TehePelo LUL Kappa TehePelo PogChamp KappaPride ThankEgg TheIlluminati CoolCat LUL Kappa
 ```
 
+Here is the Twitch Chat version of it:<br>
+<img src="https://i.imgur.com/eGgYNPn.png">
+
 ## Tools
 ### Help
 To get information about the tools of Kappa++ execute KappaPP.exe with `-help`.
@@ -168,6 +171,6 @@ Per default the current stack is the ORIGIN stack. Working on the ORIGIN stack i
 | ThankEgg | Destroys the current stack with all it's content and sets the current stack to ORIGIN.                                                                                                                                                                                                                 |
 | CopyThis | Creates a new stack and sets it as the current stack. The content of the new stack is equal to the previously active stack. The ID of the stack is the top value of the current stack. The top value will be popped off the stack.                                                                     |
 
-# Language Safety 
+# Language Safety
 The language is very forgiving and errors should not be possible. For example, if an operator is peeking or popping an empty stack a 0 (VoteNay) is returned instead of exiting with an error.
  
