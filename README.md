@@ -126,7 +126,6 @@ Literals can always be pushed onto the current stack. If the value is printed th
 | Kappa      | Prints the ASCII value of the current stacks top value. The value will be popped off the stack. (SYS_OUT)                              |
 | KappaPride | Prints the ASCII values of all values of the current stack. The values will be popped off the stack, leaving an empty stack. (SYS_OUT) |
 | SwiftRage  | Same as Kappa, but SwiftRage should be used for errors. (ERR_OUT)                                                                      |
-| SingsMic   | The caller of the program is forced to enter a line. The values will be pushed onto the current stack. (SYS_IN)                        |
 
 ## Literal Operators
 These operators manipulate the current stacks top values. The values may be popped, peeked or replaced by the result of the operator.
