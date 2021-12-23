@@ -37,3 +37,8 @@ ThankEgg
 
 TheIlluminati CoolCat LUL Kappa
 ```
+
+Here is a minified version of this code:
+```
+TBAngel VoteYea PogChamp VoteYea CoolCat CoolCat LUL LUL CoolCat TheIlluminati KKona CoolCat CoolCat SabaPing KKona SabaPing TehePelo LUL KappaPride TehePelo PogChamp VoteYea VoteNay LUL VoteNay LUL CoolCat PoroSad riPepperonis CoolCat UnSane riPepperonis CoolCat TheIlluminati KKona PoroSad SabaPing LUL VoteYea PogChamp KappaPride ThankEgg SSSsss CoolCat LUL Kappa TheIlluminati TehePelo LUL Kappa TehePelo PogChamp KappaPride ThankEgg TheIlluminati CoolCat LUL Kappa 
+```
