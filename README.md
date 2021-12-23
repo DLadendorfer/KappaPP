@@ -64,7 +64,7 @@ Hello, World!
 The file extension is irrelevant. Save the file with any or no file extension.
 
 ### CLI Tool
-For an interactive CLI experience execute Kappa.PP.exe with `-cli`:
+For an interactive command line experience execute Kappa.PP.exe with `-cli`:
 ```
 > KappaPP.exe -cli
 ```
@@ -81,3 +81,38 @@ For an interactive CLI experience execute Kappa.PP.exe with `-cli`:
 ╚══════════ K++ Finish ═══════════════════════════════════" src=https://i.imgur.com/WsGqx00.png>
 
 # Language Reference
+## Null
+
+Any series of characters that does not match a Literal, Operator, Stack Operator, Conditional Operator or Region-Identifiers is consider a null value. This way a comment can just be written in line.
+
+```
+TBAngel <<all of this is ignored>>
+comment before code: VoteYea PogChamp
+[delete stack] ThankEgg
+```
+
+This piece of code is equivivalent to:
+```
+TBAngel
+VoteYea PogChamp
+ThankEgg
+```
+## Literals
+
+Literals can always be pushed onto the current stack. If the value is printed the ASCII value will be printed! 
+
+| Emote         | Literal value |
+| ------------- | ------------- |
+| VoteNay       | 0             |
+| VoteYea       | 1             |
+| TehePelo      | 2             |
+| TheIlluminati | 3             |
+| SSSsss        | 4             |
+| TwitchUnity   | 5             |
+| UnSane        | 6             |
+| SabaPing      | 7             |
+| PoroSad       | 8             |
+| OhMyDog       | 9             |
+
+## Keywords
+| Emote | Description |
