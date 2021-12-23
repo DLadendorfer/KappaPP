@@ -64,7 +64,8 @@ module Runtime =
         /// Duplicates the current stack. The id of the new stack is the top value of the active stack, which will be popped
         member this.DuplicateStack() =
             let id = activeStack.Pop()
-            stacks.Add(id, activeStack.Clone(id))
+            if not(stacks.ContainsKey(id)) then
+                stacks.Add(id, activeStack.Clone(id))
 
         /// Pushes the given value onto the active stack
         member this.PushValue(value) = 
