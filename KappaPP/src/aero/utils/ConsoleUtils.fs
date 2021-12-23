@@ -30,4 +30,9 @@ module ConsoleUtils =
     let debug  (msg:string) = console msg debugColor
     let success(msg:string) = console msg successColor
     let output (msg:string) = Console.Write(msg)
+    let outputError (msg:string) =
+        lock cLock (fun _ -> 
+                        Console.ForegroundColor <- errorColor
+                        Console.Write(msg)
+                        Console.ResetColor())
     

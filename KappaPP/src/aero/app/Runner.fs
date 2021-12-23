@@ -21,6 +21,7 @@ module Runner =
     open Aero.Utils.Constants.Language
     open Aero.Utils
     
+    let mutable infoDumpEnabled = true // for unit tests
     let mutable handlersInitialized = false
 
     let setupHandlers () =
@@ -32,13 +33,14 @@ module Runner =
             Success.Add (fun msg -> ConsoleUtils.success msg)
     
             // delegate sysout to Console
-            Output.Add  (fun msg -> ConsoleUtils.output msg)
-            Error.Add   (fun msg -> ConsoleUtils.output msg)
+            Output.Add        (fun msg -> ConsoleUtils.output msg)
+            ErrorOutput.Add   (fun msg -> ConsoleUtils.outputError msg)
 
             handlersInitialized <- true
 
     let runSource (src:string) =
-        info $"{appName} :: lang = {langVersion}"
+        if (infoDumpEnabled) then
+            info $"{appName} :: lang = {langVersion}"
         setupHandlers()
         src
         |> splitSource
