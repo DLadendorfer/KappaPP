@@ -68,3 +68,14 @@ For an interactive CLI experience execute Kappa.PP.exe with `-cli`:
 ```
 > KappaPP.exe -cli
 ```
+<img alt ="╔══════════ K++ CLI Runtime ══════════════════════════════
+╠ KappaPP :: lang = K++ (V::1.0.0)
+╠ Enter K++ source lines to invoke them. Enter nothing to exit.
+╠ TBAngel
+╠ SabaPing TehePelo LUL Kappa VoteYea VoteNay LUL TwitchUnity LUL Kappa TheIlluminati CoolCat LUL Kappa   
+╠ H
+╠ i
+╠ !
+╠ ThankEgg
+╠ 
+╚══════════ K++ Finish ═══════════════════════════════════" src=https://i.imgur.com/WsGqx00.png>
