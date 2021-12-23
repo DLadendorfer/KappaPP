@@ -127,15 +127,18 @@ Literals can always be pushed onto the current stack. If the value is printed th
 
 ## Literal Operators
 These operators manipulate the current stacks top values. The values may be popped, peeked or replaced by the result of the operator.
-| Emote        | Description                                                                                                                                                    |
-| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| riPepperonis | Pops the top two values of the current stack, sums them and pushes the result onto the current stack.                                                          |
-| KKona        | Pops the top two values of the current stack, subtracts the top value from the second top value and pushes the result onto the current stack.                  |
-| NomNom       | Pops the top value. (This can be useful to pop a condition if it is not needed anymore)                                                                        |
-| MorphinTime  | Pops the top two values of the current stack, divides the second top value by the top most value and pushes the result onto the current stack.                 |
-| TwitchSings  | Pops the top two values of the current stack, multiplies top value by the second top value and pushes the result onto the current stack.                       |
-| LUL          | Pops the top two values of the current stack and concatenates them. e.g.: If the stack was 1>2>3, the stack will be 1>23 because the 2 and 3 got concatenated. |
-| CoolCat      | Peeks the top value of the current stack and pushes it again onto the stack (duplicating the top value).                                                       |
+| Emote        | Description                                                                                                                                                                                                                         |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| riPepperonis | Pops the top two values of the current stack, sums them and pushes the result onto the current stack.                                                                                                                               |
+| KKona        | Pops the top two values of the current stack, subtracts the top value from the second top value and pushes the result onto the current stack.                                                                                       |
+| FBBlock      | Pops the top value. (This can be useful to pop a condition if it is not needed anymore)                                                                                                                                             |
+| MorphinTime  | Pops the top two values of the current stack, divides the second top value by the top most value and pushes the result onto the current stack.                                                                                      |
+| TwitchSings  | Pops the top two values of the current stack, multiplies top value by the second top value and pushes the result onto the current stack.                                                                                            |
+| LUL          | Pops the top two values of the current stack and concatenates them. e.g.: If the stack was 1>2>3, the stack will be 1>23 because the 2 and 3 got concatenated.                                                                      |
+| CoolCat      | Peeks the top value of the current stack and pushes it again onto the stack (duplicating the top value).                                                                                                                            |
+| PowerUpL     | Peeks the top two values of the current stack and checks if the second top value is lower than the top value. If it is lower a 1 (VoteYea) will be pushed onto the stack otherwise a 0 (VoteNay) will be pushed onto the stack.     |
+| PowerUpR     | Peeks the top two values of the current stack and checks if the second top value is greater than the top value. If it is greater a 1 (VoteYea) will be pushed onto the stack otherwise a 0 (VoteNay) will be pushed onto the stack. |
+| TwitchVotes  | Peeks the top two values of the current stack and checks if the second top value is equal to the top value. If it is equal a 1 (VoteYea) will be pushed onto the stack otherwise a 0 (VoteNay) will be pushed onto the stack.       |
 
 ## Stack Operators
 These operators manipulate, create or set the current stack. There can be an unlimited number of stacks with unlimited number of values pushed onto the stacks. <br>
@@ -147,4 +150,3 @@ Per default the current stack is the ORIGIN stack. Working on the ORIGIN stack i
 | PogChamp | Creates a new stack and sets it as the current stack. The ID of the stack is the top value of the current stack. The top value will be popped off the stack. If PogChamp is called with an ID of an existing stack, the current stack will be set to the existing stack instead of creating a new one. |
 | ThankEgg | Destroys the current stack with all it's content and sets the current stack to ORIGIN.                                                                                                                                                                                                                 |
 | CopyThis | Creates a new stack and sets it as the current stack. The content of the new stack is equal to the previously active stack. The ID of the stack is the top value of the current stack. The top value will be popped off the stack.                                                                     |
-|          |
