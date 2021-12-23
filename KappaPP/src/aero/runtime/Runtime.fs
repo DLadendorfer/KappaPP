@@ -64,7 +64,6 @@ module Runtime =
         /// Duplicates the current stack. The id of the new stack is the top value of the active stack, which will be popped
         member this.DuplicateStack() =
             let id = activeStack.Pop()
-            if stacks.ContainsKey(id) then raise (Exception())
             stacks.Add(id, activeStack.Clone(id))
 
         /// Pushes the given value onto the active stack
@@ -94,8 +93,7 @@ module Runtime =
         /// Divides the two top values of the stack
         member this.Divide() =
             let a, b = activeStack.BinaryPop()
-            if b = 0 then raise(Exception())
-            activeStack.Push(a / b)
+            if b = 0 then activeStack.Push(0) else activeStack.Push(a / b)
 
         /// Duplicates the stacks top value (the top value is not popped)
         member this.Duplicate() = 

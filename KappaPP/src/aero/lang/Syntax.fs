@@ -102,8 +102,8 @@ module Syntax =
         { Raw = "twitchsings"; Token = Token.TwitchSings; CompileUnit = CompileUnit.OpMultiply; Value = Operator "[op_multiply]" };
         { Raw = "lul"; Token = Token.LUL; CompileUnit = CompileUnit.OpConcat; Value = Operator "[op_concat]" };
         { Raw = "coolcat"; Token = Token.CoolCat; CompileUnit = CompileUnit.OpDuplicate; Value = Operator "[op_duplicate]"}
-        { Raw = "powerupL"; Token = Token.PowerUpL; CompileUnit = CompileUnit.OpLower; Value = Operator "[op_lower]"}
-        { Raw = "powerupR"; Token = Token.PowerUpR; CompileUnit = CompileUnit.OpGreater; Value = Operator "[op_greater]"}
+        { Raw = "powerupl"; Token = Token.PowerUpL; CompileUnit = CompileUnit.OpLower; Value = Operator "[op_lower]"}
+        { Raw = "powerupr"; Token = Token.PowerUpR; CompileUnit = CompileUnit.OpGreater; Value = Operator "[op_greater]"}
         { Raw = "twitchvotes"; Token = Token.TwitchVotes; CompileUnit = CompileUnit.OpEquals; Value = Operator "[op_equals]"}
         { Raw = "fbblock"; Token = Token.FBBlock; CompileUnit = CompileUnit.OpRemove; Value = Operator "[op_remove]"}
         
