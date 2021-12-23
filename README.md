@@ -79,3 +79,5 @@ For an interactive CLI experience execute Kappa.PP.exe with `-cli`:
 ╠ ThankEgg
 ╠ 
 ╚══════════ K++ Finish ═══════════════════════════════════" src=https://i.imgur.com/WsGqx00.png>
+
+# Language Reference
