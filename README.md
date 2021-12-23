@@ -140,6 +140,23 @@ These operators manipulate the current stacks top values. The values may be popp
 | PowerUpR     | Peeks the top two values of the current stack and checks if the second top value is greater than the top value. If it is greater a 1 (VoteYea) will be pushed onto the stack otherwise a 0 (VoteNay) will be pushed onto the stack. |
 | TwitchVotes  | Peeks the top two values of the current stack and checks if the second top value is equal to the top value. If it is equal a 1 (VoteYea) will be pushed onto the stack otherwise a 0 (VoteNay) will be pushed onto the stack.       |
 
+## Region Operators
+A region of code has an origin and an end. These regions can be skipped with conditional operators.
+| Emote   | Description              |
+| ------- | ------------------------ |
+| GivePLZ | Opens a region of code.  |
+| TakeNRG | Closes a region of code. |
+
+## Conditional Operators
+In Kappa++ regions of code can be skipped if a conditional operator evaluates to true. If the evaluation is successful the next region is skipped. It does not have to be directly after the condition but it is recommended.
+
+| Emote     | Description                                                                                 |
+| --------- | ------------------------------------------------------------------------------------------- |
+| EleGiggle | Peeks the top value of the stack. If it is not 0 (VoteNay) the next region will be skipped. |
+| Jebaited  | Peeks the top value of the stack. If it is 0 (VoteNay) the next region will be skipped.     |
+
+
+
 ## Stack Operators
 These operators manipulate, create or set the current stack. There can be an unlimited number of stacks with unlimited number of values pushed onto the stacks. <br>
 Per default the current stack is the ORIGIN stack. Working on the ORIGIN stack is considerd bad habit but it is possible. The ORIGIN stack should only be active to create other stacks.
