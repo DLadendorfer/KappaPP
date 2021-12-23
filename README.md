@@ -167,3 +167,7 @@ Per default the current stack is the ORIGIN stack. Working on the ORIGIN stack i
 | PogChamp | Creates a new stack and sets it as the current stack. The ID of the stack is the top value of the current stack. The top value will be popped off the stack. If PogChamp is called with an ID of an existing stack, the current stack will be set to the existing stack instead of creating a new one. |
 | ThankEgg | Destroys the current stack with all it's content and sets the current stack to ORIGIN.                                                                                                                                                                                                                 |
 | CopyThis | Creates a new stack and sets it as the current stack. The content of the new stack is equal to the previously active stack. The ID of the stack is the top value of the current stack. The top value will be popped off the stack.                                                                     |
+
+# Language Safety
+The language is very forgiving and errors should not be possible. For example, if an operator is peeking or popping an empty stack a 0 (VoteNay) is returned instead of exiting with an error.
+ 
