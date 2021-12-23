@@ -11,6 +11,7 @@
     <Compile Include="test\app\RunnerTests.fs" />
     <Compile Include="test\entry\EntryTest.fs" />
     <Compile Include="test\error\ErrorsTest.fs" />
+    <Compile Include="test\lang\Stacks.fs" />
     <Compile Include="test\lang\Operators.fs" />
     <Compile Include="test\lang\IO.fs" />
     <Compile Include="test\lang\Literals.fs" />
