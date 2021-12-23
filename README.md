@@ -62,3 +62,9 @@ Hello, World!
 ```
 
 The file extension is irrelevant. Save the file with any or no file extension.
+
+### CLI Tool
+For an interactive CLI experience execute Kappa.PP.exe with `-cli`:
+```
+> KappaPP.exe -cli
+```
