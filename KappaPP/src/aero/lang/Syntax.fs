@@ -98,7 +98,6 @@ module Syntax =
           
         { Raw = "ripepperonis"; Token = Token.RiPepperonis; CompileUnit = CompileUnit.OpAdd; Value = Operator "[op_add]" };
         { Raw = "kkona"; Token = Token.KKona; CompileUnit = CompileUnit.OpSubtract; Value = Operator "[op_subtract]" };
-        { Raw = "nomnom"; Token = Token.NomNom; CompileUnit = CompileUnit.OpDelete; Value = Operator "[op_delete]" };
         { Raw = "morphintime"; Token = Token.MorphinTime; CompileUnit = CompileUnit.OpDivide; Value = Operator "[op_divide]" };
         { Raw = "twitchsings"; Token = Token.TwitchSings; CompileUnit = CompileUnit.OpMultiply; Value = Operator "[op_multiply]" };
         { Raw = "lul"; Token = Token.LUL; CompileUnit = CompileUnit.OpConcat; Value = Operator "[op_concat]" };
