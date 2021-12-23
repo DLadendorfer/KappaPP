@@ -11,10 +11,9 @@
     <Compile Include="test\app\RunnerTests.fs" />
     <Compile Include="test\entry\EntryTest.fs" />
     <Compile Include="test\error\ErrorsTest.fs" />
-    <Compile Include="test\lang\SyntaxTests.fs" />
+    <Compile Include="test\lang\IO.fs" />
+    <Compile Include="test\lang\Literals.fs" />
     <Compile Include="test\runtime\StackTests.fs" />
-    <Compile Include="test\utils\ConsoleUtilsTest.fs" />
-    <Compile Include="UnitTest1.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

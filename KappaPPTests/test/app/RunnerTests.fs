@@ -17,6 +17,6 @@ module RunnerTests =
 
     [<Test>]
     let RunMinimumSourceTest () =
-        let source = "TbAngel VoteYea djfkl ;::: d :LUL:"
+        let source = "TbAngel"
         Assert.That(runSource source, Is.EqualTo(0))
 

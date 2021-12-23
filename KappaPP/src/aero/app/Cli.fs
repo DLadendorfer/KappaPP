@@ -46,9 +46,10 @@ module Cli =
     let setupHandlers() =
         BeforeInput.Add   (fun _ -> prefixHandler.Print(); System.Console.ForegroundColor <- ConsoleUtils.debugColor)
         Output.Add        (fun msg -> if not(msg = "") then ConsoleUtils.success($"{msg}"))
+        ErrorOutput.Add   (fun msg -> if not(msg = "") then ConsoleUtils.error($"{msg}"))
         Prefix.Add        (fun msg -> prefixHandler.Print())        
         Info.Add          (fun msg -> ConsoleUtils.info(msg))
-        Error.Add          (fun msg -> ConsoleUtils.error(msg))
+        Error.Add         (fun msg -> ConsoleUtils.error(msg))
 
     let handleInput (runtime:Runtime) (input:string) =
         input
