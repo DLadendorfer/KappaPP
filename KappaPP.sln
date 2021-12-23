@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "KappaPP", "KappaPP\KappaPP.fsproj", "{35044B68-937C-41A8-BA69-2EE3950FD35C}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "KappaPPTests", "KappaPPTests\KappaPPTests.fsproj", "{2F4447F2-37EF-43AE-834D-B51068731CCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{35044B68-937C-41A8-BA69-2EE3950FD35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35044B68-937C-41A8-BA69-2EE3950FD35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35044B68-937C-41A8-BA69-2EE3950FD35C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F4447F2-37EF-43AE-834D-B51068731CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4447F2-37EF-43AE-834D-B51068731CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4447F2-37EF-43AE-834D-B51068731CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4447F2-37EF-43AE-834D-B51068731CCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

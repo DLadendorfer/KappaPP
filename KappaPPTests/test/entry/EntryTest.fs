@@ -17,6 +17,9 @@ module EntryTest =
         ()
 
     [<Test>]
+    let test = 
+        Assert.That(1, Is.EqualTo(1))
+    [<Test>]
     let NoArgumentsTest () = 
         Assert.That(invoke [||], Is.EqualTo(toVal ExitCode.InvalidArgumentLength))
 

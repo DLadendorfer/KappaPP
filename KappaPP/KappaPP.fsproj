@@ -22,18 +22,7 @@
     <Compile Include="src\aero\app\Help.fs" />
     <Compile Include="src\aero\app\Runner.fs" />
     <Compile Include="src\aero\entry\Entry.fs" />
-    <Compile Include="test\app\RunnerTests.fs" />
-    <Compile Include="test\entry\EntryTest.fs" />
-    <Compile Include="test\error\ErrorsTest.fs" />
-    <Compile Include="test\lang\SyntaxTests.fs" />
-    <Compile Include="test\runtime\StackTests.fs" />
-    <Compile Include="test\utils\ConsoleUtilsTest.fs" />
     <Compile Include="Program.fs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="NUnit" Version="3.13.2" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
   </ItemGroup>
 
 </Project>
